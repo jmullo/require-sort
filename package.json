@@ -1,0 +1,31 @@
+{
+  "name": "require-sort",
+  "version": "0.1.0",
+  "description": "A utility for sorting require() statements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmullo/require-sort.git"
+  },
+  "keywords": [
+    "require",
+    "sort",
+    "node",
+    "module"
+  ],
+  "author": "Jussi Mullo <mulloju@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmullo/require-sort/issues"
+  },
+  "homepage": "https://github.com/jmullo/require-sort",
+  "dependencies": {
+    "lodash": "^4.8.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
