@@ -46,6 +46,13 @@ describe("require-sort tests", function() {
         assert.equal(sortedString, inputString);
     });
 
+    it("should handle mac line endings", function() {
+        var inputString = "var foo = require(\"bar\");\r";
+        var sortedString = sorter.sortString(inputString);
+
+        assert.equal(sortedString, inputString);
+    });
+
     it("should handle unix line endings", function() {
         var inputString = "var foo = require(\"bar\");\n";
         var sortedString = sorter.sortString(inputString);

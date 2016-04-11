@@ -5,6 +5,8 @@ var _ = require("lodash");
 function getLineEndingType(inputString) {
     if (_.includes(inputString, "\r\n")) {
         return "\r\n";
+    } else if (_.includes(inputString, "\r")) {
+        return "\r";
     }
 
     return "\n";
