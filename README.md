@@ -2,6 +2,8 @@
 
 A utility for sorting require() statements.
 
+[![Build Status](https://travis-ci.org/jmullo/require-sort.svg?branch=master)](https://travis-ci.org/jmullo/require-sort)
+
 ## Installation
 
 ```
