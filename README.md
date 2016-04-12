@@ -4,6 +4,8 @@ A utility for sorting require() statements.
 
 [![NPM Version](https://img.shields.io/npm/v/require-sort.svg)](https://www.npmjs.com/package/require-sort)
 [![Build Status](https://travis-ci.org/jmullo/require-sort.svg?branch=master)](https://travis-ci.org/jmullo/require-sort)
+[![Dependencies Status](https://david-dm.org/jmullo/require-sort.svg)](https://david-dm.org/jmullo/require-sort)
+[![Dev Dependencies Status](https://david-dm.org/jmullo/require-sort/dev-status.svg)](https://david-dm.org/jmullo/require-sort#info=devDependencies)
 
 ## Installation
 
