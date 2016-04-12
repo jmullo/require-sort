@@ -2,7 +2,7 @@
 
 A utility for sorting require() statements.
 
-[![NPM version](https://img.shields.io/npm/v/require-sort.svg)](https://www.npmjs.com/package/require-sort)
+[![NPM Version](https://img.shields.io/npm/v/require-sort.svg)](https://www.npmjs.com/package/require-sort)
 [![Build Status](https://travis-ci.org/jmullo/require-sort.svg?branch=master)](https://travis-ci.org/jmullo/require-sort)
 
 ## Installation
