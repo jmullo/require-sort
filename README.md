@@ -21,15 +21,15 @@ $ npm install require-sort
 
 ```js
 var alpha = require("alpha");           // external group
-var xalpha = require("xalpha");
+var xalpha = require("xalpha");         // ...
 var beta = require("beta/beta");        // path group
-var xbeta = require("xbeta/xbeta");
+var xbeta = require("xbeta/xbeta");     // ...
 var gamma = require("/gamma");          // absolute group
-var xgamma = require("/xgamma");
+var xgamma = require("/xgamma");        // ...
 var delta = require("./delta");         // relative group
-var xdelta = require("./xdelta");
+var xdelta = require("./xdelta");       // ...
 var epsilon = require("../epsilon");    // parent group
-var xepsilon = require("../xepsilon");
+var xepsilon = require("../xepsilon");  // ...
 ```
 
 ## Usage
