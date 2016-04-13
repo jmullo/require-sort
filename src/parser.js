@@ -9,7 +9,7 @@ function newSection() {
 }
 
 function isRequireRow(row) {
-    return _.includes(row, "require(") && _.endsWith(row.trim(), ";");
+    return _.includes(row, "require(") && !_.endsWith(row.trim(), ",");
 }
 
 function isSectionEnd(row, section) {

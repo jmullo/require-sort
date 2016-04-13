@@ -39,6 +39,14 @@ describe("require-sort tests", function() {
         assert.equal(sortedString, inputString);
     });
 
+    it("should handle require statements without semicolons", function() {
+        var inputString = "var foo = require(\"bar\")\nvar beta = require(\"alpha\")";
+        var expectedString = "var beta = require(\"alpha\")\nvar foo = require(\"bar\")";
+        var sortedString = sorter.sortString(inputString);
+
+        assert.equal(sortedString, expectedString);
+    });
+
     it("should handle windows line endings", function() {
         var inputString = "var foo = require(\"bar\");\r\n";
         var sortedString = sorter.sortString(inputString);
