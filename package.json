@@ -1,6 +1,6 @@
 {
   "name": "require-sort",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A utility for sorting require() statements.",
   "main": "index.js",
   "scripts": {
