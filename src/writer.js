@@ -12,8 +12,14 @@ function getLineEndingType(inputString) {
     return "\n";
 }
 
-function replaceSection(inputArray, section, lineEnding) {
-    inputArray[section.startIndex] = section.rowGroups.join(lineEnding);
+function replaceSection(inputArray, section, lineEnding, emptyLines) {
+    var divider = lineEnding;
+
+    if (emptyLines) {
+        divider += lineEnding;
+    }
+
+    inputArray[section.startIndex] = section.rowGroups.join(divider);
 }
 
 function clearReplacedRows(inputArray, section) {
@@ -24,8 +30,8 @@ function clearReplacedRows(inputArray, section) {
     });
 }
 
-function replaceSections(inputString, sectionArray) {
-    var inputArray = inputString.split(/\r?\n/);
+function replaceSections(inputString, sectionArray, options) {
+    var inputArray = inputString.split(/\r\n|\n|\r/);
     var lineEnding = getLineEndingType(inputString);
 
     sectionArray.forEach(function(section) {
@@ -33,13 +39,13 @@ function replaceSections(inputString, sectionArray) {
             section.rowGroups[index] = group.join(lineEnding);
         });
 
-        replaceSection(inputArray, section, lineEnding);
+        replaceSection(inputArray, section, lineEnding, options.emptyLines);
         clearReplacedRows(inputArray, section);
     });
 
-    inputArray = _.without(inputArray, null).join(lineEnding);
+    var outputString = _.without(inputArray, null).join(lineEnding);
 
-    return inputArray;
+    return outputString;
 }
 
 module.exports = {

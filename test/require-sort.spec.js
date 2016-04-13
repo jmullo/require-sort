@@ -69,11 +69,29 @@ describe("require-sort tests", function() {
         assert.equal(sortedString, outputString);
     });
 
+    it("should sort basic input file with emptyLines enabled", function() {
+        var inputString = fs.readFileSync("./test/input/input-basic.js").toString();
+        var outputString = fs.readFileSync("./test/output/output-basic-divided.js").toString();
+
+        var sortedString = sorter.sortString(inputString, {emptyLines: true});
+
+        assert.equal(sortedString, outputString);
+    });
+
     it("should sort groups input file", function() {
         var inputString = fs.readFileSync("./test/input/input-groups.js").toString();
         var outputString = fs.readFileSync("./test/output/output-groups.js").toString();
 
         var sortedString = sorter.sortString(inputString);
+
+        assert.equal(sortedString, outputString);
+    });
+
+    it("should sort groups input file with emptyLines enabled", function() {
+        var inputString = fs.readFileSync("./test/input/input-groups.js").toString();
+        var outputString = fs.readFileSync("./test/output/output-groups-divided.js").toString();
+
+        var sortedString = sorter.sortString(inputString, {emptyLines: true});
 
         assert.equal(sortedString, outputString);
     });

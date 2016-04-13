@@ -21,7 +21,7 @@ function isLastSection(section, index, array) {
 }
 
 function getRequireSections(inputString) {
-    var inputArray = inputString.split(/\r?\n/);
+    var inputArray = inputString.split(/\r\n|\n|\r/);
     var section = newSection();
     var sections = [];
 
